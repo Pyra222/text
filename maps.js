@@ -1,6 +1,7 @@
 var map = {
     name: 'CHAPTER 1: <span style="color: rgb(123, 175, 224)">HOSPITAL<span>',
-    desc: '<br><img src=".\/img\/img3.png"><br>Only map in this game. I\'ll think about adding more maps in the future.<br><br>',
+    icon: '.\/img\/img3.png',
+    desc: 'Only map in this game. I\'ll think about adding more maps in the future.',
     rooms: [
         {
             name: 'Room1',

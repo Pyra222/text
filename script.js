@@ -64,9 +64,10 @@ function init() {
     // load();
     $('#command').focus();
     createIndex();
-    printResponse('⎯⎯ 👁 ⎯⎯', 'special');
+    printResponse('', 'special');
     printResponse('⎯⎯ ' + map.name + ' ⎯⎯', 'special');
-    printResponse(map.desc, 'special');
+    printResponse('<br><img src="'+map.icon+'"><br><br>', 'special');
+    printResponse(map.desc+'<br><br>', 'special');
     executeCommand('look around');
     executeCommand('inv');
     printResponse('⎯⎯ 👁 ⎯⎯', 'special');
