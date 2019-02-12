@@ -1,0 +1,174 @@
+@keyframes appear{
+    from {opacity: 0;}
+    to   {opacity: 1;}
+}
+
+* {
+    /* box-sizing: border-box; */
+    /* font-family: monospace; */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    /* font-family: 'Major Mono Display', monospace; */
+    /* font-family: 'Amatic SC', cursive; */
+    /* font-family: 'Cinzel', serif; */
+    /* font-family: 'Permanent Marker', cursive; */
+    /* font-family: 'Merienda', cursive; */
+    font-family: 'Cardo', serif;
+    /* font-family: 'Caveat', cursive; */
+    /* font-family: 'Special Elite', cursive; */
+}
+
+body{
+    background: rgb(30,30,30);
+    margin-bottom: 5px;
+}
+
+#container {
+    /* position: absolute; */
+    margin: 0 auto;
+    height: 100vh;
+    max-width: 21cm;
+    display: flex;
+    flex-direction: column;
+}
+
+#screen{
+    display: block;
+    flex: 10;
+    overflow: auto;
+    margin: 5px;
+    line-height: 25px;
+    padding-right: 5px;
+}
+
+#input{
+    border-top: 1px solid rgba(255,255,255,0.1);
+    height: 30px;
+    display: flex;
+    align-content: center;
+    position: relative;
+}
+#command{
+    width: 100%;
+    font-size: 20px;
+    padding: 5px;
+    padding-left: 20px;
+    background: rgb(30,30,30);
+    border: none;
+    outline: none;
+    position: relative;
+}
+#input::after{
+    content: '>';
+    color: white;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    font-size: 20px;
+    padding: 2px;
+    padding-left: 5px;
+}
+.entry{
+    text-align: justify;
+}
+.player{
+    
+}
+
+.game{
+    color: rgb(200,200,200);
+    animation: appear 0.3s linear forwards;
+}
+
+.debug{
+    color: gold;
+    animation: appear 0.3s linear forwards;
+}
+
+.error{
+    color: rgb(255, 56, 49);
+    animation: appear 0.3s linear forwards;
+}
+
+.special{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+.say{
+    color: rgb(255, 56, 49);
+    animation: appear 0.3s linear forwards;
+}
+
+.item{
+    color: rgb(104, 147, 61);
+    cursor: pointer;
+    transition: color 0.7s;
+}
+.item:hover{
+    text-shadow: 0px 0px 3px gold;
+    color: gold;
+    transition: color 0.2s;
+}
+
+s{
+    color: inherit;
+}
+
+.img{
+    max-width: 100%;
+    box-shadow: 0px 0px 30px rgb(30,30,30) inset;
+}
+.sidePanel{
+    position: absolute;
+    display: block;
+}
+
+#move{
+    bottom: 70px;
+    right: 70px;
+}
+
+.direction{
+    position: absolute;
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    user-select: none;
+    color: rgb(60,60,60);
+    transition: color 0.7s;
+}
+
+.direction:hover{
+    text-shadow: 0px 0px 3px gold;
+    color: gold;
+    transition: color 0.2s;
+}
+
+.direction.possible{
+    text-shadow: 0px 0px 3px gold,
+                 0px 0px 2px gold;
+}
+
+#move #north{
+    top: 0px;
+    left: 20px;
+}
+#move #south{
+    top: 40px;
+    left: 20px;
+}
+#move #east{
+    top: 20px;
+    left: 40px;
+}
+#move #west{
+    top: 20px;
+    left: 0px;
+}
