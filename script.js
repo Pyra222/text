@@ -165,7 +165,6 @@ function executeCommand(command) {
                 printResponse('inventory (inv, i)', 'debug');
                 printResponse('examine [item]  (look, l)', 'debug');
                 printResponse('drop [item]     (d)', 'debug');
-                // printResponse('open      (o)'       ,'debug');
                 printResponse('read [item]     (r)', 'debug');
                 printResponse('get [item]      (g, take, t)', 'debug');
                 printResponse('use [item], use [item] [on/with] [item]      (u)', 'debug');
@@ -230,9 +229,6 @@ function executeCommand(command) {
                     printResponse('You can\'t drop what you don\'t have.');
                 }
             } break;
-
-            // case 'open':
-            // case 'o': {} break;
 
             case 'read':
             case 'r': {
@@ -365,5 +361,6 @@ $(document).on('click', '.item', function (e) {
 $(window).on("beforeunload", function () {
     save();
 });
+
 // Start things up
 init();

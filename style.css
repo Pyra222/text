@@ -4,20 +4,11 @@
 }
 
 * {
-    /* box-sizing: border-box; */
-    /* font-family: monospace; */
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     color: white;
-    /* font-family: 'Major Mono Display', monospace; */
-    /* font-family: 'Amatic SC', cursive; */
-    /* font-family: 'Cinzel', serif; */
-    /* font-family: 'Permanent Marker', cursive; */
-    /* font-family: 'Merienda', cursive; */
     font-family: 'Cardo', serif;
-    /* font-family: 'Caveat', cursive; */
-    /* font-family: 'Special Elite', cursive; */
 }
 
 body{
@@ -26,7 +17,6 @@ body{
 }
 
 #container {
-    /* position: absolute; */
     margin: 0 auto;
     height: 100vh;
     max-width: 21cm;
@@ -104,7 +94,7 @@ body{
 }
 
 .item{
-    color: rgb(104, 147, 61);
+    color: rgb(123, 175, 224);
     cursor: pointer;
     transition: color 0.7s;
 }
