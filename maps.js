@@ -1,4 +1,4 @@
-var map = {
+var map1 = {
     name: 'CHAPTER 1: <span style="color: rgb(123, 175, 224)">HOSPITAL<span>',
     icon: '.\/img\/img3.png',
     desc: 'Only map in this game. I\'ll think about adding more maps in the future.',
@@ -28,6 +28,44 @@ var map = {
             exits: {
                 north: null,
                 south: 'Room1',
+                east: null,
+                west: null
+            }
+        }
+    ]
+}
+
+var tutorial = {
+    name: 'CHAPTER 0: <span style="color: rgb(123, 175, 224)">TUTORIAL<span>',
+    icon: '.\/img\/img3.png',
+    desc: 'Learn the ropes.',
+    rooms: [
+        {
+            name: 'Tutorial room 1',
+            desc: 'This is famous first tutorial room. Even the greatest starts here. It\'s a good idea to read a note first.' ,
+            items: [
+                items.ball,
+                items.wall,
+                items.note1
+            ],
+            exits: {
+                north: null,
+                south: null,
+                east: 'Tutorial room 2',
+                west: null
+            }
+        },
+        {
+            name: 'Tutorial room 2',
+            desc: '2',
+            items: [
+                // items.note2,
+                // items.tutorialKey,
+                // items.tutorialDoor
+            ],
+            exits: {
+                north: null,
+                south: 'Tutorial room 1',
                 east: null,
                 west: null
             }

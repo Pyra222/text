@@ -102,4 +102,129 @@ var items = {
         name: 'Old photo',
         desc: 'An old photo of a house. It looks old and ready to collapse at any minute.'
     },
+    // TUTORIAL ITEMS
+    // ball wall note1 note2 tutorialKey tutorialDoor
+    ball: {
+        id: "ball",
+        name: "Rubber ball",
+        desc: "It's a red rubber ball.",
+        take: {
+            possible: true,
+            okMessage: 'You take the ball with you. Little red ball and you are now good friends.',
+            nokMessage: 'You already have the ball.',
+            action: 'items.ball.take.possible = false;'
+        },
+        read: {
+            possible: false,
+            okMessage: '',
+            nokMessage: 'No visible symbols are on the ball.',
+            action: ''
+        },
+        use: {
+            with: {
+                wall: {
+                    possible: true,
+                    okMessage: "Look what you have done. The wall wasn't very sturdy. There is a hole here now.",
+                    nokMessage: "Don't you think it's enough damage for today?",
+                    action: 'room.exits.north = "Tutorial room 2";'+
+                            'items.ball.use.with.wall.possible = false;'+
+                            "items.wall.desc = \"There's a gaping hole where a perfectly good wall once was.\";"+
+                            'checkDirection();'
+                },
+                default: {
+                    possible: true,
+                    okMessage: 'You play with the ball for a while. So much fun!',
+                    nokMessage: '',
+                    action: ''
+                }
+            }
+        }
+    },
+    wall: {
+        id: "wall",
+        name: "Wall",
+        desc: "A perfectly good wall.",
+        take: {
+            possible: false,
+            okMessage: '',
+            nokMessage: 'How exactly do you want to take a wall with you?',
+            action: ''
+        },
+        read: {
+            possible: true,
+            okMessage: 'In the upper right corner of the wall there is a small inscription. It say\'s: "Please, don\'t play with balls around this wall."',
+            nokMessage: '',
+            action: ''
+        },
+        use: {
+            with: {
+                default: {
+                    possible: true,
+                    okMessage: 'You lean against the wall for a while. You remember your school days.',
+                    nokMessage: '',
+                    action: ''
+                }
+            }
+        }
+    },
+    note1: {
+        id: "note1",
+        name: "Note #1",
+        desc: "Note: a piece of paper with some text written on it, maybe try reading it?",
+        take: {
+            possible: true,
+            okMessage: 'You take the note with you.',
+            nokMessage: 'You already have the note in your pocket.',
+            action: 'items.note1.take.possible = false;'
+        },
+        read: {
+            possible: true,
+            okMessage: 'Hello there. This is a tutorial note #1. For starters, why don\'t you try to interact with the ball?',
+            nokMessage: '',
+            action: ''
+        },
+        use: {
+            with: {
+                default: {
+                    possible: true,
+                    okMessage: '',
+                    nokMessage: '',
+                    action: 'executeCommand("read Note #1");'
+                }
+            }
+        }
+    },
+    // ball: {
+    //     id: "",
+    //     name: "",
+    //     desc: "",
+    //     take: {
+    //         possible: true,
+    //         okMessage: '',
+    //         nokMessage: '',
+    //         action: ''
+    //     },
+    //     read: {
+    //         possible: true,
+    //         okMessage: '',
+    //         nokMessage: '',
+    //         action: ''
+    //     },
+    //     use: {
+    //         with: {
+    //             thing: {
+    //                 possible: true,
+    //                 okMessage: '',
+    //                 nokMessage: '',
+    //                 action: ''
+    //             },
+    //             default: {
+    //                 possible: true,
+    //                 okMessage: '',
+    //                 nokMessage: '',
+    //                 action: ''
+    //             }
+    //         }
+    //     }
+    // },
 }

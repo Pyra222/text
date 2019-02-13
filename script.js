@@ -1,11 +1,7 @@
-var player, inventory, room, log, index = [];
+var player, inventory, room, log, index = [], map;
 
 inventory = {
-    items: [
-        items.coat,
-        items.pen,
-        items.old_photo
-    ],
+    items: [],
     list: function () {
         var response = "";
         if (this.items.length > 0) {
@@ -57,6 +53,7 @@ log = {
 }
 
 function init() {
+    map = tutorial;
     room = map.rooms[0];
     // if(!window.localStorage.getItem('save')){
     //     save();
@@ -224,6 +221,7 @@ function executeCommand(command) {
                 if (item && inventory.items.find(e => e.id == item.id)) {
                     room.items.push(item);
                     inventory.items.splice(inventory.items.findIndex(e => e.id == item1), 1);
+                    item.take.possible = true;
                     printResponse('You dropped ' + item.name);
                     createIndex();
                 } else {
