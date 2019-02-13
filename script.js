@@ -69,6 +69,7 @@ function init() {
     executeCommand('inv');
     printResponse('⎯⎯ 👁 ⎯⎯', 'special');
     checkDirection();
+    // playSound('./sfx/myuu_ABYSS.mp3');
 }
 function save() {
     var state = {}
@@ -335,7 +336,10 @@ function updateScroll() {
     var $screen = $('#screen');
     $screen[0].scrollTop = $screen[0].scrollHeight;
 }
-
+function playSound(soundPath){
+    var audio = new Audio(soundPath);
+    audio.play();
+}
 $('#command').on('keypress', function (e) {
     if (e.which == 13 && $(this).val()) {
         var command = $(this).val();

@@ -129,7 +129,8 @@ var items = {
                     action: 'room.exits.north = "Tutorial room 2";'+
                             'items.ball.use.with.wall.possible = false;'+
                             "items.wall.desc = \"There's a gaping hole where a perfectly good wall once was.\";"+
-                            'checkDirection();'
+                            'checkDirection();'+
+                            'playSound("./sfx/rock_wall.wav");'
                 },
                 default: {
                     possible: true,

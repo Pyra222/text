@@ -27,7 +27,7 @@ body{
 #screen{
     display: block;
     flex: 10;
-    overflow: auto;
+    overflow-y: scroll;
     margin: 5px;
     line-height: 25px;
     padding-right: 5px;
