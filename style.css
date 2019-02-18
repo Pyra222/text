@@ -137,13 +137,14 @@ s{
 
 .direction:hover{
     text-shadow: 0px 0px 3px gold;
-    color: gold;
+    color: gold !important;
     transition: color 0.2s;
 }
 
 .direction.possible{
-    text-shadow: 0px 0px 3px gold,
-                 0px 0px 2px gold;
+    color: rgb(123, 175, 224);
+    text-shadow: 0px 0px 3px rgb(123, 175, 224),
+                 0px 0px 2px rgb(123, 175, 224);
 }
 
 #move #north{
